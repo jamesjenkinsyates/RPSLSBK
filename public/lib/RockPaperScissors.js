@@ -43,5 +43,12 @@ Game.prototype.loser = function() {
   return (this.winner() == this.player1) ? this.player2 : this.player1
 }
 
-
-
+Game.prototype.humanWinsMessage = function() {
+  if(this.humanWins()){
+    return "You Win!";
+  }
+  return "You Lose!";
+}
+Game.prototype.humanWins = function() {
+  return this.winner() == this.player1;
+}

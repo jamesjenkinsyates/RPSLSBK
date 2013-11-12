@@ -5,15 +5,17 @@
     <link href='./css/css.css' rel="stylesheet" type="text/css">
   </head>
   <body>
+  <div class="overlay" style="display:none;">
+      <h2 id='change'></h2>
+  </div>
     <section id="lab">
       <div class="sectionheader"> 
         <h1>Rock Paper Scissors Lizard Spock Blair Ketchup</h1>
         <h2>By <a href="http://jamesjenkinsyates.com">James Jenkins-Yates</a> @ <a href="http://jamesjenkinsyates.com/category/makers-academy-review/">Makers Academy</a></h2>
+
       </div>  
 
-      <div class="result">
-        <h1 id='change'> </h1>
-      </div>
+      
         <article>
 
         </div>
@@ -120,7 +122,9 @@
         player2.picksAI();
         player1.picks($(this).attr('data-pick'));
         if(game.winner() == null) {
-          $( "#change" ).html("It is a draw!");
+          $( "#change" ).html("Draw!");
+          $( '.overlay' ).show()
+          setTimeout(function(){$( '.overlay' ).fadeOut()},300);
           $(".draw").removeClass('draw');
           $(".winner").removeClass('winner');
           $(".loser").removeClass('loser');
@@ -131,7 +135,10 @@
           }
 
         else {
-          $( "#change" ).html("Winner is " + game.winner().name + ' and they picked ' + game.winner().pick );
+          $( "#change" ).html(game.humanWinsMessage());
+          $( '.overlay' ).show()
+          setTimeout(function(){$( '.overlay' ).fadeOut()},300);
+          
           $(".draw").removeClass('draw');
           $(".winner").removeClass('winner');
           $(".loser").removeClass('loser');
