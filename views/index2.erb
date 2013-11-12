@@ -25,7 +25,7 @@
      <div class="lab_item" data-pick='rock'>
               <div class="hexagon hexagon2">
                 <div class="hexagon-in1">
-                    <div class="hexagon-in2" style="background-image: url(./img/rock/rock1.jpg);">                
+                    <div class="hexagon-in2" style="background-image: url(/img/rock/rock1.jpg);">                
                     </div>
                  </div>
              </div>
@@ -33,7 +33,7 @@
      <div class="lab_item" data-pick='paper'>
               <div class="hexagon hexagon2">
                 <div class="hexagon-in1">
-                    <div class="hexagon-in2" style="background-image: url(./img/paper/paper1.jpg);">                
+                    <div class="hexagon-in2" style="background-image: url(/img/paper/paper1.jpg);">                
                     </div>
                  </div>
              </div>
@@ -121,6 +121,11 @@
           }
         else {
           $( "#change" ).html("Winner is " + game.winner().name + ' and they picked ' + game.winner().pick );
+          $(".winner").removeClass('winner');
+          $(".loser").removeClass('loser');
+          $('[data-pick="' + game.winner().pick + '"]').addClass("winner");
+          $('[data-pick="' + game.loser().pick + '"]').addClass("loser");
+          // game.loser();
           // $( "*[data-pick=game.winner().pick]" ).css("box-shadow", "rgba(0, 105, 13, 0.72)")
           
         };

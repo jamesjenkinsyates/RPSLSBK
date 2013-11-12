@@ -39,6 +39,9 @@ Game.prototype.winner = function() {
     return this.player2 };
 }
 
+Game.prototype.loser = function() {
+  return (this.winner() == this.player1) ? this.player2 : this.player1
+}
 
 
 
