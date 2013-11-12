@@ -60,7 +60,16 @@ table {
 
 h1 {
   font-family: bebas_neueregular ,sans-serif;
-  font-size: 1.75em;
+  font-size: 1.60em;
+  padding: 0.2em 0 0.2em 0.2em;
+  color: white;
+  text-shadow: 0 0.06em 0 #424242;
+  position: relative;
+}
+
+h2 {
+  font-family: bebas_neueregular ,sans-serif;
+  font-size: 0.75em;
   padding: 0.2em 0 0.2em 0.2em;
   color: white;
   text-shadow: 0 0.06em 0 #424242;
@@ -68,6 +77,10 @@ h1 {
 }
 
 #lab h1 {
+  background: rgba(255, 138, 31, 0.53);
+}
+
+#lab h2 {
   background: rgba(255, 138, 31, 0.53);
 }
 
