@@ -192,6 +192,11 @@ h1 {
   box-shadow: inset 0 0 0 200px rgba(0, 105, 13, 0.72);
 }
 
+.draw .hexagon-in2 {
+  -webkit-box-shadow: inset 0 0 0 200px rgba(137, 155, 252, 0.72);
+  box-shadow: inset 0 0 0 200px rgba(137, 155, 252, 0.72);
+}
+
 .loser .hexagon-in2 {
   -webkit-box-shadow: inset 0 0 0 200px rgba(105, 0, 13, 0.72);
   box-shadow: inset 0 0 0 200px rgba(105, 0, 13, 0.72);
