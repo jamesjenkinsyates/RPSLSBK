@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors Lizard Spock Blair Ketchup</title>
+    <link href='./css/css.css' rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <section id="lab">
+      <div class="sectionheader"> <h1>Rock Paper Scissors Lizard Spock Blair Ketchup</h1><div class="beaker"></div></div>  
+
+      <div class="result">
+        <h1 id='change'> </h1>
+      </div>
+        <article>
+
+        </div>
+          <div class="lab_item">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                                    
+              </div>
+            </div>
+          </div>
+        </div>
+     <div class="lab_item" data-pick='rock'>
+              <div class="hexagon hexagon2">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(./img/rock/rock1.jpg);">                
+                    </div>
+                 </div>
+             </div>
+             </div>
+     <div class="lab_item" data-pick='paper'>
+              <div class="hexagon hexagon2">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(./img/paper/paper1.jpg);">                
+                    </div>
+                 </div>
+             </div>
+             </div>
+                  <div class="lab_item" >        
+            <div class="hexagon hexagon2">
+                <div class="hexagon-in1">
+                                    
+                    </div>
+                 </div>
+             </div>
+             </div>
+              <div class="lab_item" data-pick='blair'>
+              <div class="hexagon hexagon2">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(./img/blair/blair1.jpg);">                
+                    </div>
+                 </div>
+             </div>
+             </div>
+              <div class="lab_item" data-pick='ketchup'>
+              <div class="hexagon hexagon2">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(./img/ketchup/ketchup1.jpg);">                
+                    </div>
+                 </div>
+             </div>
+             </div>
+              <div class="lab_item" data-pick='scissors'>
+              <div class="hexagon hexagon2">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(./img/scissors/scissors1.jpg);">                
+                    </div>
+                 </div>
+             </div>
+             </div>
+              <div class="lab_item">
+              <div class="hexagon hexagon2">
+                <div class="hexagon-in1">
+                
+                    </div>
+                 </div>
+             </div>
+             </div>
+              <div class="lab_item" data-pick='lizard'>
+              <div class="hexagon hexagon2">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(./img/lizard/lizard1.jpg);">                
+                    </div>
+                 </div>
+             </div>
+             </div>
+              <div class="lab_item" data-pick='spock'>
+              <div class="hexagon hexagon2">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(./img/spock/spock1.jpg);">                
+                    </div>
+                 </div>
+             </div>
+             </div>
+              <div class="lab_item">
+              <div class="hexagon hexagon2">
+             </div>
+             </div>
+              
+
+             
+              
+      </article>
+    </section>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src= "lib/RockPaperScissors.js"></script>
+    <script>
+      var James = new Player('You');
+      var HamChaps = new Player('The Computer');
+
+      var game = new Game(James, HamChaps)
+
+      $('.lab_item').on('click', function() {
+        HamChaps.picksAI();
+        James.picks($(this).attr('data-pick'));
+        if(game.winner() == null) {
+          $( "#change" ).html("It is a draw!");
+          }
+        else {
+          $( "#change" ).html("Winner is " + game.winner().name + ' and they picked ' + game.winner().pick );
+          // $( "*[data-pick=game.winner().pick]" ).css("box-shadow", "rgba(0, 105, 13, 0.72)")
+          
+        };
+      
+      });
+
+    </script>
+
+  </body>
+</html>
