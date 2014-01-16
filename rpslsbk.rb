@@ -5,7 +5,7 @@ configure :production do
 end
 
 get '/' do 
-  erb :index2
+  erb :index
 end
 
 post '/write' do
