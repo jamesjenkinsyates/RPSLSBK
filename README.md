@@ -7,4 +7,4 @@ This project was completed on the first day of learning Javascript in Week 7 of 
 
 Preview: 
 
-![RPSLSBK preview](/READMEimgs/preview.jpg "RPSLSBK preview")
+![RPSLSBK preview](/READMEimgs/preview.png "RPSLSBK preview")
